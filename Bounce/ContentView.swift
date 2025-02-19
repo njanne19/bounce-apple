@@ -9,11 +9,17 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        Grid {
+            GridRow {
+                Text("VPN Status: Not Connected")
+                    .font(.headline)
+                    .frame(minWidth: 600, alignment: .leading)
+                Button("Connect") {
+                    
+                }
+                .frame(minWidth: 100)
+            }
+            TextEditor(text: /*@START_MENU_TOKEN@*/.constant("Placeholder")/*@END_MENU_TOKEN@*/)
         }
         .padding()
     }

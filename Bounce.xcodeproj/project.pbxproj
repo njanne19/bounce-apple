@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		01D2AC4F2D657C440080CB4A /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D2AC4E2D657C440080CB4A /* NetworkExtension.framework */; };
+		01D2AC572D657C440080CB4A /* Bounce Extension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 01D2AC4C2D657C440080CB4A /* Bounce Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		01D2AC2C2D6571DD0080CB4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -21,13 +26,46 @@
 			remoteGlobalIDString = 01D2AC192D6571DB0080CB4A;
 			remoteInfo = Bounce;
 		};
+		01D2AC552D657C440080CB4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 01D2AC122D6571DB0080CB4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 01D2AC4B2D657C440080CB4A;
+			remoteInfo = "Bounce Extension";
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		01D2AC5C2D657C440080CB4A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				01D2AC572D657C440080CB4A /* Bounce Extension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		01D2AC1A2D6571DB0080CB4A /* Bounce.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bounce.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D2AC2B2D6571DD0080CB4A /* BounceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BounceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D2AC352D6571DD0080CB4A /* BounceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BounceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D2AC4C2D657C440080CB4A /* Bounce Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Bounce Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		01D2AC4E2D657C440080CB4A /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		01D2AC582D657C440080CB4A /* Exceptions for "Bounce Extension" folder in "Bounce Extension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 01D2AC4B2D657C440080CB4A /* Bounce Extension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		01D2AC1C2D6571DB0080CB4A /* Bounce */ = {
@@ -43,6 +81,14 @@
 		01D2AC382D6571DD0080CB4A /* BounceUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = BounceUITests;
+			sourceTree = "<group>";
+		};
+		01D2AC502D657C440080CB4A /* Bounce Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				01D2AC582D657C440080CB4A /* Exceptions for "Bounce Extension" folder in "Bounce Extension" target */,
+			);
+			path = "Bounce Extension";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -69,6 +115,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01D2AC492D657C440080CB4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01D2AC4F2D657C440080CB4A /* NetworkExtension.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -78,6 +132,8 @@
 				01D2AC1C2D6571DB0080CB4A /* Bounce */,
 				01D2AC2E2D6571DD0080CB4A /* BounceTests */,
 				01D2AC382D6571DD0080CB4A /* BounceUITests */,
+				01D2AC502D657C440080CB4A /* Bounce Extension */,
+				01D2AC4D2D657C440080CB4A /* Frameworks */,
 				01D2AC1B2D6571DB0080CB4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,8 +144,17 @@
 				01D2AC1A2D6571DB0080CB4A /* Bounce.app */,
 				01D2AC2B2D6571DD0080CB4A /* BounceTests.xctest */,
 				01D2AC352D6571DD0080CB4A /* BounceUITests.xctest */,
+				01D2AC4C2D657C440080CB4A /* Bounce Extension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		01D2AC4D2D657C440080CB4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01D2AC4E2D657C440080CB4A /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,10 +167,12 @@
 				01D2AC162D6571DB0080CB4A /* Sources */,
 				01D2AC172D6571DB0080CB4A /* Frameworks */,
 				01D2AC182D6571DB0080CB4A /* Resources */,
+				01D2AC5C2D657C440080CB4A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				01D2AC562D657C440080CB4A /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				01D2AC1C2D6571DB0080CB4A /* Bounce */,
@@ -163,6 +230,28 @@
 			productReference = 01D2AC352D6571DD0080CB4A /* BounceUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		01D2AC4B2D657C440080CB4A /* Bounce Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01D2AC592D657C440080CB4A /* Build configuration list for PBXNativeTarget "Bounce Extension" */;
+			buildPhases = (
+				01D2AC482D657C440080CB4A /* Sources */,
+				01D2AC492D657C440080CB4A /* Frameworks */,
+				01D2AC4A2D657C440080CB4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				01D2AC502D657C440080CB4A /* Bounce Extension */,
+			);
+			name = "Bounce Extension";
+			packageProductDependencies = (
+			);
+			productName = "Bounce Extension";
+			productReference = 01D2AC4C2D657C440080CB4A /* Bounce Extension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -184,6 +273,9 @@
 						CreatedOnToolsVersion = 16.2;
 						TestTargetID = 01D2AC192D6571DB0080CB4A;
 					};
+					01D2AC4B2D657C440080CB4A = {
+						CreatedOnToolsVersion = 16.2;
+					};
 				};
 			};
 			buildConfigurationList = 01D2AC152D6571DB0080CB4A /* Build configuration list for PBXProject "Bounce" */;
@@ -203,6 +295,7 @@
 				01D2AC192D6571DB0080CB4A /* Bounce */,
 				01D2AC2A2D6571DD0080CB4A /* BounceTests */,
 				01D2AC342D6571DD0080CB4A /* BounceUITests */,
+				01D2AC4B2D657C440080CB4A /* Bounce Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -223,6 +316,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		01D2AC332D6571DD0080CB4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01D2AC4A2D657C440080CB4A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -253,6 +353,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		01D2AC482D657C440080CB4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -265,6 +372,11 @@
 			isa = PBXTargetDependency;
 			target = 01D2AC192D6571DB0080CB4A /* Bounce */;
 			targetProxy = 01D2AC362D6571DD0080CB4A /* PBXContainerItemProxy */;
+		};
+		01D2AC562D657C440080CB4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 01D2AC4B2D657C440080CB4A /* Bounce Extension */;
+			targetProxy = 01D2AC552D657C440080CB4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -393,10 +505,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bounce/Bounce.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bounce/Preview Content\"";
+				DEVELOPMENT_TEAM = 9462LNMHUH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -418,10 +532,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = Bounce/Bounce.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Bounce/Preview Content\"";
+				DEVELOPMENT_TEAM = 9462LNMHUH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
@@ -476,6 +592,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9462LNMHUH;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickjanne.BounceUITests;
@@ -491,6 +608,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9462LNMHUH;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.nickjanne.BounceUITests;
@@ -498,6 +616,58 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = Bounce;
+			};
+			name = Release;
+		};
+		01D2AC5A2D657C440080CB4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Bounce Extension/Bounce_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9462LNMHUH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bounce Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Bounce Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickjanne.Bounce.Bounce-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		01D2AC5B2D657C440080CB4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "Bounce Extension/Bounce_Extension.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 9462LNMHUH;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Bounce Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Bounce Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nickjanne.Bounce.Bounce-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -536,6 +706,15 @@
 			buildConfigurations = (
 				01D2AC462D6571DD0080CB4A /* Debug */,
 				01D2AC472D6571DD0080CB4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		01D2AC592D657C440080CB4A /* Build configuration list for PBXNativeTarget "Bounce Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01D2AC5A2D657C440080CB4A /* Debug */,
+				01D2AC5B2D657C440080CB4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
