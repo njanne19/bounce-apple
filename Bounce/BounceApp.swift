@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct BounceApp: App {
+    @StateObject var controller = VPNController()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(controller: controller)
         }
     }
 }

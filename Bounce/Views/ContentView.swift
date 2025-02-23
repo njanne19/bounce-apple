@@ -8,14 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var controller: VPNController
+    
     var body: some View {
         Grid {
             GridRow {
-                Text("VPN Status: Not Connected")
+                Text("VPN Profile Status: \(controller.vpnProfileIsInstalled == true ? "Installed" : "Not Installed")")
                     .font(.headline)
                     .frame(minWidth: 600, alignment: .leading)
-                Button("Connect") {
-                    
+                Button(controller.vpnProfileIsInstalled == true ? "Uninstall" : "Install") {
+                    controller.toggleVPNProfileInstallation()
                 }
                 .frame(minWidth: 100)
             }
@@ -26,5 +28,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    ContentView(controller: .init())
 }
